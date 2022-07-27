@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": { "Cache-Control": "max-age=604800" },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    { 
+      "src": "/(.*)", 
+      "status": 404, 
+      "dest": "/404.html" 
+    }
+  ]
+}
